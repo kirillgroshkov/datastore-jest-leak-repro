@@ -1,0 +1,18 @@
+{
+  "name": "datastore-jest-leak-repro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-leaking": "jest leaking --maxWorkers=1 --logHeapUsage --detectOpenHandles",
+    "test-leaking-detectLeaks": "jest leaking --maxWorkers=1 --logHeapUsage --detectOpenHandles --detectLeaks",
+    "test-working": "jest working --maxWorkers=1 --logHeapUsage --detectOpenHandles --detectLeaks"
+  },
+  "author": "Kirill Groshkov <1@inventix.ru>",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/datastore": "^3.1.2",
+    "jest": "^24.5.0",
+    "weak": "^1.0.1"
+  }
+}
